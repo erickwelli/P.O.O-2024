@@ -58,3 +58,4 @@ SAVE_TO = os.path.join(BASE_DIR, 'arquivo2.json')
 
 with open(SAVE_TO, 'w') as file:
     json.dump(funcionarios, file, indent=4)
+    

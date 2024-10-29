@@ -8,4 +8,4 @@ with open(JSON_FILE, 'r') as file:
     funcionarios = json.load(file)
     
     for funcionario in funcionarios:
-        print(funcionario['nome'])
+        print(funcionario)
