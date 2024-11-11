@@ -5,12 +5,13 @@ data = input("Digite a data da venda (formato: DD/MM/AAAA): ")
 venda = Venda(data)
 opcao = "0"
 
-while opcao != "4":
+while opcao != "5":
     print("\nMenu:")
     print("1. Adicionar Produto")
     print("2. Remover Produto")
     print("3. Listar Produtos e Mostrar Total")
-    print("4. Sair")
+    print("4. Salvar em Json")
+    print("5. Sair")
     
     opcao = input("Escolha uma opção: ")
 
@@ -61,7 +62,12 @@ while opcao != "4":
         print(f"Total da Venda: R${venda.calcularTotal():.2f}")
 
     elif opcao == "4":
+        arquivo = input("Digite o nome do arquivo:")
+        venda.SalvarEmJson(arquivo)
+
+    elif opcao == "5":
         print("Saindo...")
 
     else:
         print("Opção inválida, tente novamente.")
+        

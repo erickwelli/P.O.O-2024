@@ -1,3 +1,5 @@
+import json
+
 class Venda:
     def __init__(self, dataVenda):
         self.__produtos = []
@@ -37,3 +39,10 @@ class Venda:
             print(f"\nProdutos na Venda do dia {self.__dataVenda}:")
             for produto in self.__produtos:
                 print(f"Nome: {produto.get_nome()}, Preço: R${produto.get_preco():.2f}, Quantidade: {produto.get_quantidade()}")
+
+    def SalvarEmJson(self, arquivo):
+        objeto_dic = [obj.to_dic() for obj in self.__produtos]
+        dados_json = json.dumps(objeto_dic)
+        with open (arquivo, 'w') as arquivo:
+            arquivo.write(dados_json)
+            

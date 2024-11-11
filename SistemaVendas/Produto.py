@@ -21,3 +21,12 @@ class Produto:
 
     def set_quantidade(self, quantidade):
         self.__quantidade = quantidade
+
+    def to_dic(self):
+        return {
+            "nome": self.__nome,
+            "preco": self.__preco,
+            "quantidade": self.__quantidade
+        }
+    
+    
