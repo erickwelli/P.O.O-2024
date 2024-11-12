@@ -44,5 +44,4 @@ class Venda:
         objeto_dic = [obj.to_dic() for obj in self.__produtos]
         dados_json = json.dumps(objeto_dic)
         with open (arquivo, 'w') as arquivo:
-            arquivo.write(dados_json)
-            
+            arquivo.write(dados_json)   

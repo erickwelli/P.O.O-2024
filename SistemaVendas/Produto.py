@@ -28,5 +28,3 @@ class Produto:
             "preco": self.__preco,
             "quantidade": self.__quantidade
         }
-    
-    

@@ -70,4 +70,3 @@ while opcao != "5":
 
     else:
         print("Opção inválida, tente novamente.")
-        
