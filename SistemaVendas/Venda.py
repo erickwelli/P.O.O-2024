@@ -1,4 +1,5 @@
 import json
+import Produto
 
 class Venda:
     def __init__(self, dataVenda):
@@ -24,6 +25,10 @@ class Venda:
             total += produto.get_preco() * produto.get_quantidade()
         return total
 
+    def adicionarProduto(self, produto):
+        self.__produtos.append(produto)
+        print(f'Produto {produto.get_nome()} adicionado com sucesso! ')
+
     def removerProduto(self, nome):
         for produto in self.__produtos:
             if produto.get_nome() == nome:
@@ -44,4 +49,12 @@ class Venda:
         objeto_dic = [obj.to_dic() for obj in self.__produtos]
         dados_json = json.dumps(objeto_dic)
         with open (arquivo, 'w') as arquivo:
-            arquivo.write(dados_json)   
+            arquivo.write(dados_json)  
+
+    def RecuperarDados(self, arquivo):
+        with open(arquivo, 'r', encoding="utf-8") as f:
+            carregar_dic = json.load(f)
+        for dados in carregar_dic:
+            objeto = Produto.from_dic(dados)
+            self.adicionarProduto(objeto)
+            

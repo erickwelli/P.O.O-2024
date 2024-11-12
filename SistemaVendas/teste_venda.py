@@ -11,7 +11,8 @@ while opcao != "5":
     print("2. Remover Produto")
     print("3. Listar Produtos e Mostrar Total")
     print("4. Salvar em Json")
-    print("5. Sair")
+    print("5. Carregar Arquivo")
+    print("6. Sair")
     
     opcao = input("Escolha uma opção: ")
 
@@ -66,7 +67,12 @@ while opcao != "5":
         venda.SalvarEmJson(arquivo)
 
     elif opcao == "5":
+        arquivo = input("Nome do arquivo com os dados da venda: ")
+        venda.RecuperarDados(arquivo)
+
+    elif opcao == "6":
         print("Saindo...")
+        break
 
     else:
         print("Opção inválida, tente novamente.")
