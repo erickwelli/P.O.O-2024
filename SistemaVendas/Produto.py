@@ -33,5 +33,5 @@ class Produto:
     def from_dic(cls, dados):
         nome = dados['nome']
         preco = dados['preco']
-        quantidade = dados['anoPublicacao']
+        quantidade = dados['quantidade']
         return cls(nome, preco, quantidade)

@@ -1,5 +1,5 @@
 import json
-import Produto
+from Produto import Produto
 
 class Venda:
     def __init__(self, dataVenda):
@@ -51,10 +51,11 @@ class Venda:
         with open (arquivo, 'w') as arquivo:
             arquivo.write(dados_json)  
 
+            
     def RecuperarDados(self, arquivo):
         with open(arquivo, 'r', encoding="utf-8") as f:
             carregar_dic = json.load(f)
+
         for dados in carregar_dic:
             objeto = Produto.from_dic(dados)
             self.adicionarProduto(objeto)
-            

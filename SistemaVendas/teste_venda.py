@@ -5,7 +5,7 @@ data = input("Digite a data da venda (formato: DD/MM/AAAA): ")
 venda = Venda(data)
 opcao = "0"
 
-while opcao != "5":
+while opcao != "6":
     print("\nMenu:")
     print("1. Adicionar Produto")
     print("2. Remover Produto")
