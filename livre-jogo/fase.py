@@ -58,8 +58,8 @@ class Parte3(Fase):
         escolha = JogoUtil.fazer_escolha(self.__opcoes)
 
         if escolha == 0:
-            return Parte4
-        
+            return Parte4()
+
 class Parte4(Fase):
     def __init__(self):
         self.__descricao = """Segunda de manhã logo cedo, você já se encontra na fábrica, o local aparenta ser confortável, mas há cartazes de bonecas que deixam arrepios, em uma das salas de fileiras e fileiras de bonecas para concerto. Como segurança, você tem tarefas a fazer, vamos começar!"""
@@ -72,7 +72,10 @@ class Parte4(Fase):
         escolha = JogoUtil.fazer_escolha(self.__opcoes)
 
         if escolha == 0:
-            return Parte5
+            return Parte5()
+        
+        else:
+            return None
         
 class Parte5(Fase):
     def __init__(self):
@@ -86,10 +89,10 @@ class Parte5(Fase):
         escolha = JogoUtil.fazer_escolha(self.__opcoes)
 
         if escolha == 0:
-            return Parte6
+            return Parte6()
         
         else:
-            return Parte7
+            return Parte7()
         
 
 class Parte7(Fase):
@@ -106,7 +109,7 @@ class Parte7(Fase):
         escolha = JogoUtil.fazer_escolha(self.__opcoes)
 
         if escolha == 0:
-            return Final_alternativo2
+            return Final_alternativo2()
                 
 
 class Final_alternativo2(Fase):

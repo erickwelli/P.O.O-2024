@@ -1,4 +1,4 @@
-from fases import FaseInicial
+from fase import FaseInicial
 
 class Jogo:
     def __init__(self):
